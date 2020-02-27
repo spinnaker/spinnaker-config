@@ -1,0 +1,4 @@
+namespace: spin-test
+bases:
+- ../config
+
