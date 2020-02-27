@@ -1,0 +1,11 @@
+namespace: spin-test
+bases:
+- github.com/ezimanyi/spinnaker-kustomize/base 
+secretGenerator:
+- files:
+  - config/clouddriver.yml
+  name: clouddriver-config
+  behavior: merge
+- files: []
+  name: spinnaker-secrets
+  behavior: merge
