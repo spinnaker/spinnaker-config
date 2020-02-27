@@ -2,7 +2,7 @@ bases:
 - github.com/ezimanyi/spinnaker-kustomize/base 
 secretGenerator:
 - files:
-  - config/clouddriver.yml
+  - kleat/clouddriver.yml
   name: clouddriver-config
   behavior: merge
 - files: []
