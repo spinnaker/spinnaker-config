@@ -1,10 +1,11 @@
-bases:
-- github.com/spinnaker/kustomization-base/base
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
 secretGenerator:
-- files:
+- behavior: merge
+  files:
   - kleat/clouddriver.yml
   name: clouddriver-config
-  behavior: merge
-- files: []
+- behavior: merge
   name: spinnaker-secrets
-  behavior: merge
+resources:
+- github.com/spinnaker/kustomization-base/base
