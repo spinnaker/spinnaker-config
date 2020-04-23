@@ -6,6 +6,10 @@ secretGenerator:
   - kleat/clouddriver.yml
   name: clouddriver-config
 - behavior: merge
+  files:
+  - kleat/echo.yml
+  name: echo-config
+- behavior: merge
   name: spinnaker-secrets
 resources:
 - github.com/spinnaker/kustomization-base/base
