@@ -11,8 +11,20 @@ secretGenerator:
   name: echo-config
 - behavior: merge
   files:
+  - kleat/fiat.yml
+  name: fiat-config
+- behavior: merge
+  files:
   - kleat/front50.yml
   name: front50-config
+- behavior: merge
+  files:
+  - kleat/gate.yml
+  name: gate-config
+- behavior: merge
+  files:
+  - kleat/igor.yml
+  name: igor-config
 - behavior: merge
   files:
   - kleat/orca.yml
