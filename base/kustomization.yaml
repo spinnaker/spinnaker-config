@@ -38,6 +38,7 @@ secretGenerator:
 resources:
 - github.com/spinnaker/kustomization-base/core
 # - github.com/spinnaker/kustomization-base/kayenta
+# - github.com/spinnaker/kustomization-base/fiat
 commonLabels:
   app.kubernetes.io/component: server
   app.kubernetes.io/managed-by: kleat
