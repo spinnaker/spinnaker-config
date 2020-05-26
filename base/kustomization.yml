@@ -33,8 +33,7 @@ secretGenerator:
   files:
   - kleat/orca.yml
   name: orca-config
-- behavior: merge
-  name: spinnaker-secrets
+- name: spinnaker-secrets
 resources:
 - github.com/spinnaker/kustomization-base/core
 # - github.com/spinnaker/kustomization-base/kayenta
