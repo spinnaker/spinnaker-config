@@ -27,9 +27,20 @@ secretGenerator:
   name: igor-config
 - behavior: merge
   files:
+  - kleat/kayenta.yml
+  name: kayenta-config
+- behavior: merge
+  files:
   - kleat/orca.yml
   name: orca-config
-- behavior: merge
-  name: spinnaker-secrets
+- name: spinnaker-secrets
 resources:
-- github.com/spinnaker/kustomization-base/base
+- github.com/spinnaker/kustomization-base/core
+# - github.com/spinnaker/kustomization-base/kayenta
+# - github.com/spinnaker/kustomization-base/fiat
+commonLabels:
+  app.kubernetes.io/component: server
+  app.kubernetes.io/managed-by: kleat
+  app.kubernetes.io/part-of: spinnaker
+  app.kubernetes.io/version: 1.20.2
+namespace: spinnaker
