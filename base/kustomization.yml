@@ -33,7 +33,13 @@ secretGenerator:
   files:
   - kleat/orca.yml
   name: orca-config
-- name: spinnaker-secrets
+- behavior: merge
+  files:
+  - kleat/rosco.yml
+  name: rosco-config
+- behavior: merge
+  name: spinnaker-secrets
+  files: []
 resources:
 - github.com/spinnaker/kustomization-base/core
 # - github.com/spinnaker/kustomization-base/kayenta
