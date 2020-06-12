@@ -7,6 +7,10 @@ secretGenerator:
   name: clouddriver-config
 - behavior: merge
   files:
+  - kleat/settings.js
+  name: deck-config
+- behavior: merge
+  files:
   - kleat/echo.yml
   name: echo-config
 - behavior: merge
@@ -40,6 +44,11 @@ secretGenerator:
 - behavior: merge
   name: spinnaker-secrets
   files: []
+configMapGenerator:
+- behavior: merge
+  name: deck-env
+  envs:
+  - kleat/deck.env
 resources:
 - github.com/spinnaker/kustomization-base/core
 # - github.com/spinnaker/kustomization-base/kayenta
