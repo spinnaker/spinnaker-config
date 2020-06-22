@@ -42,6 +42,13 @@ secretGenerator:
   - kleat/rosco.yml
   name: rosco-config
 - behavior: merge
+  name: spinnaker-monitoring-config
+  files:
+  - kleat/spinnaker-monitoring.yml
+- behavior: merge
+  name: spinnaker-monitoring-filters
+  files: []
+- behavior: merge
   name: spinnaker-secrets
   files: []
 configMapGenerator:
