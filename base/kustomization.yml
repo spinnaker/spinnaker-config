@@ -64,5 +64,28 @@ commonLabels:
   app.kubernetes.io/component: server
   app.kubernetes.io/managed-by: kleat
   app.kubernetes.io/part-of: spinnaker
-  app.kubernetes.io/version: 1.20.2
+  app.kubernetes.io/version: spinnaker-master-latest-unvalidated
 namespace: spinnaker
+images:
+- name: gcr.io/spinnaker-marketplace/clouddriver
+  newTag: spinnaker-master-latest-unvalidated
+- name: gcr.io/spinnaker-marketplace/deck
+  newTag: spinnaker-master-latest-unvalidated
+- name: gcr.io/spinnaker-marketplace/echo
+  newTag: spinnaker-master-latest-unvalidated
+- name: gcr.io/spinnaker-marketplace/fiat
+  newTag: spinnaker-master-latest-unvalidated
+- name: gcr.io/spinnaker-marketplace/front50
+  newTag: spinnaker-master-latest-unvalidated
+- name: gcr.io/spinnaker-marketplace/gate
+  newTag: spinnaker-master-latest-unvalidated
+- name: gcr.io/spinnaker-marketplace/igor
+  newTag: spinnaker-master-latest-unvalidated
+- name: gcr.io/spinnaker-marketplace/kayenta
+  newTag: spinnaker-master-latest-unvalidated
+- name: gcr.io/spinnaker-marketplace/monitoring-daemon
+  newTag: spinnaker-master-latest-unvalidated
+- name: gcr.io/spinnaker-marketplace/orca
+  newTag: spinnaker-master-latest-unvalidated
+- name: gcr.io/spinnaker-marketplace/rosco
+  newTag: spinnaker-master-latest-unvalidated
