@@ -1,0 +1,1 @@
+window.spinnakerSettings = JSON.parse('{"gateUrl":"http://34.126.108.117:8084","authEndpoint":"http://34.126.108.117:8084/auth/user","bakeryDetailUrl":"http://34.126.108.117:8084/bakery/logs/{{context.region}}/{{context.status.resourceId}}","canary":{"featureDisabled":true},"notifications":{},"providers":{"kubernetes":{}},"defaultTimeZone":"Etc/UTC","feature":{}}');

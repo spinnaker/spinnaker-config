@@ -1,0 +1,7 @@
+spinnaker:
+  gcs:
+    bucket: infra-spinnaker-omg
+    enabled: true
+    jsonPath: encryptedFile:gcs!b:spinnaker-storage-omg!f:secrets/spinnaker-gcs-sa.json
+    project: omisego-development
+    rootFolder: front50

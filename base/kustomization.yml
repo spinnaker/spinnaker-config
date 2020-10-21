@@ -24,6 +24,7 @@ secretGenerator:
 - behavior: merge
   files:
   - kleat/gate.yml
+  - local/gate-local.yml
   name: gate-config
 - behavior: merge
   files:
@@ -42,22 +43,24 @@ secretGenerator:
   - kleat/rosco.yml
   name: rosco-config
 - behavior: merge
-  name: spinnaker-monitoring-config
   files:
   - kleat/spinnaker-monitoring.yml
+  name: spinnaker-monitoring-config
 - behavior: merge
   name: spinnaker-monitoring-filters
-  files: []
 - behavior: merge
   name: spinnaker-secrets
-  files: []
+  files:
+  - secrets/kubeconfig-spinnaker-sa
 configMapGenerator:
 - behavior: merge
-  name: deck-env
   envs:
   - kleat/deck.env
+  name: deck-env
 resources:
 - github.com/spinnaker/kustomization-base/core
+- redis/service.yml
+- ingress/spinnaker-lb.yml
 # - github.com/spinnaker/kustomization-base/kayenta
 # - github.com/spinnaker/kustomization-base/fiat
 commonLabels:
@@ -89,3 +92,12 @@ images:
   newTag: spinnaker-master-latest-validated
 - name: gcr.io/spinnaker-marketplace/rosco
   newTag: spinnaker-master-latest-validated
+
+patchesStrategicMerge:
+- patches/gate-readiness-probe.yml
+- patches/deck-expose.yml
+- patches/gate-expose.yml
+# - target:
+#     kind: Deployment
+#     name: gate
+#   path: patches/gate-readiness-probe.yml

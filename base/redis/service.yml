@@ -1,7 +1,8 @@
+# GCP managed Redis: https://console.cloud.google.com/memorystore/redis/instances?project=omisego-development
 apiVersion: v1
 kind: Service
 metadata:
   name: redis
 spec:
   type: ExternalName
-  externalName: redis.mydomain.test
+  externalName: 10.98.2.51

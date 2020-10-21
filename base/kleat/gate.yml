@@ -1,0 +1,8 @@
+cors:
+  allowedOriginsPattern: http://34.126.67.3:9000
+server:
+  ssl:
+    enabled: false
+services:
+  deck:
+    baseUrl: http://34.126.67.3:9000

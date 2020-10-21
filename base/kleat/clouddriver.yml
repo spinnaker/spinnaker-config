@@ -1,0 +1,7 @@
+kubernetes:
+  accounts:
+  - debug: true
+    kubeconfigFile: encryptedFile:gcs!b:infra-spinnaker-omg!f:secrets/kubeconfig-spinnaker-sa
+    name: spinnaker-gke-sa
+  enabled: true
+  primaryAccount: spinnaker-gke-sa

@@ -1,0 +1,29 @@
+providers:
+  kubernetes:
+    enabled: true
+    accounts:
+      - name: spinnaker-gke-sa
+        kubeconfigFile: encryptedFile:gcs!b:infra-spinnaker-omg!f:secrets/kubeconfig-spinnaker-sa
+        # context: gke_omisego-development_asia-southeast1_infra
+        debug: true
+        # kubeconfigFile: /var/secrets/kubeconfig-spinnaker-sa
+    primaryAccount: spinnaker-gke-sa
+persistentStorage:
+  persistentStoreType: gcs
+  gcs:
+    enabled: true
+    project: omisego-development
+    bucket: infra-spinnaker-omg
+    rootFolder: front50
+    jsonPath: encryptedFile:gcs!b:spinnaker-storage-omg!f:secrets/spinnaker-gcs-sa.json
+timezone: Etc/UTC
+security:
+  apiSecurity:
+    ssl:
+      enabled: false
+    overrideBaseUrl: http://34.126.108.117:8084
+    corsAccessPattern: http://34.126.67.3:9000
+  uiSecurity:
+    ssl:
+      enabled: false
+    overrideBaseUrl: http://34.126.67.3:9000

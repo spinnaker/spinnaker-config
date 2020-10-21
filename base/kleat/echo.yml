@@ -1,0 +1,7 @@
+scheduler:
+  cron:
+    timezone: Etc/UTC
+stats:
+  deploymentMethod:
+    type: kleat
+    version: 0.5.1
