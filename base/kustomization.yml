@@ -67,25 +67,25 @@ commonLabels:
   app.kubernetes.io/version: spinnaker-master-latest-validated
 namespace: spinnaker
 images:
-- name: gcr.io/spinnaker-marketplace/clouddriver
+- name: us-docker.pkg.dev/spinnaker-community/docker/clouddriver
   newTag: spinnaker-master-latest-validated
-- name: gcr.io/spinnaker-marketplace/deck
+- name: us-docker.pkg.dev/spinnaker-community/docker/deck
   newTag: spinnaker-master-latest-validated
-- name: gcr.io/spinnaker-marketplace/echo
+- name: us-docker.pkg.dev/spinnaker-community/docker/echo
   newTag: spinnaker-master-latest-validated
-- name: gcr.io/spinnaker-marketplace/fiat
+- name: us-docker.pkg.dev/spinnaker-community/docker/fiat
   newTag: spinnaker-master-latest-validated
-- name: gcr.io/spinnaker-marketplace/front50
+- name: us-docker.pkg.dev/spinnaker-community/docker/front50
   newTag: spinnaker-master-latest-validated
-- name: gcr.io/spinnaker-marketplace/gate
+- name: us-docker.pkg.dev/spinnaker-community/docker/gate
   newTag: spinnaker-master-latest-validated
-- name: gcr.io/spinnaker-marketplace/igor
+- name: us-docker.pkg.dev/spinnaker-community/docker/igor
   newTag: spinnaker-master-latest-validated
-- name: gcr.io/spinnaker-marketplace/kayenta
+- name: us-docker.pkg.dev/spinnaker-community/docker/kayenta
   newTag: spinnaker-master-latest-validated
-- name: gcr.io/spinnaker-marketplace/monitoring-daemon
+- name: us-docker.pkg.dev/spinnaker-community/docker/monitoring-daemon
   newTag: spinnaker-master-latest-validated
-- name: gcr.io/spinnaker-marketplace/orca
+- name: us-docker.pkg.dev/spinnaker-community/docker/orca
   newTag: spinnaker-master-latest-validated
-- name: gcr.io/spinnaker-marketplace/rosco
+- name: us-docker.pkg.dev/spinnaker-community/docker/rosco
   newTag: spinnaker-master-latest-validated
