@@ -57,9 +57,9 @@ configMapGenerator:
   envs:
   - kleat/deck.env
 resources:
-- github.com/spinnaker/kustomization-base/core
-# - github.com/spinnaker/kustomization-base/kayenta
-# - github.com/spinnaker/kustomization-base/fiat
+- github.com/spinnaker/kustomization-base/core?ref=master
+# - github.com/spinnaker/kustomization-base/kayenta?ref=master
+# - github.com/spinnaker/kustomization-base/fiat?ref=master
 commonLabels:
   app.kubernetes.io/component: server
   app.kubernetes.io/managed-by: kleat
